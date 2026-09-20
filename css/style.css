@@ -53,10 +53,10 @@ a {
 /* ---------- typography ---------- */
 
 .scribble {
-  margin: 0 0 2px;
+  margin: 0 0 25px;
   color: var(--red);
   font-family: "Caveat", cursive;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 1;
   transform: rotate(-2deg);
@@ -84,7 +84,7 @@ a {
   margin-top: 4px;
   color: #fff;
   font-size: 42px;
-  text-shadow: 0 4px 5px rgba(0, 0, 0, .25);
+  text-shadow: 0 0px 10px rgba(0, 0, 0, .5);
 }
 
 .light-heading h2 {
@@ -168,7 +168,7 @@ a {
 }
 
 .hero-copy .scribble {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   font-size: 22px;
 }
 
@@ -229,14 +229,13 @@ a {
 }
 
 .price-table-wrap {
-  overflow: hidden;
-  border-left: 5px solid var(--blue-dark);
+  overflow-y: scroll;
   border-radius: 3px;
+  max-height: 75vh;
 }
 
 .price-table {
   margin: 0;
-  font-size: 9px;
   line-height: 1.15;
 }
 
@@ -245,11 +244,13 @@ a {
   border: 1px solid #fff;
   background: var(--red);
   color: #fff;
-  text-align: center;
   vertical-align: middle;
   font-family: "Alfa Slab One", serif;
-  font-size: 8px;
-  font-weight: 400;
+}
+
+.thead-inverse {
+  background: var(--red);
+  color: #fff;
 }
 
 .price-table th:first-child {
@@ -258,9 +259,11 @@ a {
 }
 
 .price-table td {
-  padding: 6px 7px;
   border: 0;
-  vertical-align: middle;
+  vertical-align: middle!important;
+}
+
+.price-table tr td:first-child {
 }
 
 .price-table tbody tr:nth-child(even) {
@@ -275,6 +278,10 @@ a {
 
 .price-note p {
   margin-bottom: 12px;
+}
+
+.shadowed {
+  text-shadow: 0 0px 10px rgba(0, 0, 0, .5);
 }
 
 .happy-dogs {
@@ -296,7 +303,7 @@ a {
   font-family: "Alfa Slab One", serif;
   font-size: 43px;
   line-height: 1;
-  text-shadow: 3px 4px 0 rgba(0, 0, 0, .18);
+  text-shadow: 0 0px 10px rgba(0, 0, 0, .5);
 }
 
 .happy-dogs span {

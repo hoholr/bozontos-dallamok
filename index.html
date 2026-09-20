@@ -31,7 +31,7 @@
 
       <div class="row align-items-center hero-content">
         <div class="col-lg-6 hero-copy">
-          <p class="scribble">csibész a bozontos bundáknak</p>
+          <p class="scribble">szépség a bozontos bundáknak</p>
           <h1>BOZONTOS<br>DALLAMOK</h1>
           <p class="lead">
             Kutyakozmetika, ahol a precíz nyírás, a gondos fülápolás és
@@ -65,27 +65,487 @@
           <div class="table-responsive price-table-wrap">
             <table class="table price-table">
               <thead>
-                <tr>
-                  <th scope="col">szőrös...</th>
-                  <th scope="col">Fürdetés,<br>szárítás</th>
-                  <th scope="col">Teljes kozmetika<br>(trimmeléssel vagy ollózva)</th>
-                  <th scope="col">Teljes kozmetika<br>(nyírva géppel és ollóval)</th>
-                  <th scope="col">Teljes kozmetika<br>(nyírva géppel)</th>
-                </tr>
+                <tr class="thead-inverse">
+                  <td><input type="text" id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Szűrés fajtára..."></td>
+                  <td>Fürdetés,<br />szárítás</td>
+                  <td>Teljes kozmetika<br />(trimmelve <br />vagy ollózva)</td>
+                  <td>Teljes kozmetika<br />(nyírva géppel <br />és ollóval)</td>
+                  <td>Teljes kozmetika<br />(nyírva géppel)</td>
+                </tr>                
               </thead>
-              <tbody>
-                <tr><td>Sealyham terrier, Skót terrier, West Highland White terrier</td><td>8 000 Ft</td><td>15 000 Ft</td><td>13 000 Ft</td><td>–</td></tr>
-                <tr><td>Border terrier, Cairn terrier, Norfolk és Norwich terrier</td><td>8 000 Ft</td><td>15 000 Ft</td><td>–</td><td>–</td></tr>
-                <tr><td>Törpe Schnauzer</td><td>8 000 Ft</td><td>15 000 Ft</td><td>13 000 Ft</td><td>–</td></tr>
-                <tr><td>Kínai meztelen és törpe méretű szálkás szőrű tacskó</td><td>6 000 Ft</td><td>13 500 Ft</td><td>–</td><td>–</td></tr>
-                <tr><td>Standard méretű szálkás tacskó</td><td>8 000 Ft</td><td>15 000 Ft</td><td>–</td><td>–</td></tr>
-                <tr><td>Griffon (brüsszeli és belga), Affenpinscher</td><td>8 000 Ft</td><td>14 000 Ft</td><td>–</td><td>–</td></tr>
-                <tr><td>Jack Russel terrier, Jagd terrier, Parson Russel terrier</td><td>8 000 Ft</td><td>15 000 Ft</td><td>–</td><td>–</td></tr>
-                <tr><td>Cavalier King Charles Spániel</td><td>8 000 Ft</td><td>14 000 Ft</td><td>–</td><td>–</td></tr>
-                <tr><td>Bichon Bolognese, Bichon Frise, Bichon Havanese</td><td>8 000 Ft</td><td>–</td><td>13 500 Ft</td><td>12 000 Ft</td></tr>
-                <tr><td>Shih-tzu, Máltai selyemkutya</td><td>8 000 Ft</td><td>–</td><td>13 500 Ft</td><td>12 000 Ft</td></tr>
-                <tr><td>Coton de tulear</td><td>8 000 Ft</td><td>–</td><td>14 500 Ft</td><td>13 000 Ft</td></tr>
+              <div class="tbody-wrapper">
+              <tbody id="pricelist">
+                <tr>
+                  <td class="font-weight-bold">Sealyham terrier, Skót terrier, West Highland White terrier</td>
+                  <td>8 000 Ft</td>
+                  <td>15 000 Ft</td>
+                  <td>13 000 Ft</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Border terrier, Cairn terrrier, Norfolk és Norwich terrier</td>
+                  <td>8 000 Ft</td>
+                  <td>15 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Törpe Schnauzer</td>
+                  <td>8 000 Ft</td>
+                  <td>15 000 Ft</td>
+                  <td>13 000 Ft</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Kaninchen és törpe méretű szálkás szőrű tacskó</td>
+                  <td>6 000 Ft</td>
+                  <td>13 500 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Standard méretű szálkás tacskó</td>
+                  <td>8 000 Ft</td>
+                  <td>15 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Griffon (brüsszeli és belga), Affenpinscher</td>
+                  <td>8 000 Ft</td>
+                  <td>14 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Jack Russel terrer, Jagd terrier, Parson Russel terrier</td>
+                  <td>8 000 Ft</td>
+                  <td>15 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Cavalier King Charles Spániel</td>
+                  <td>8 000 Ft</td>
+                  <td>14 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Bichon Bolognese, Bichon Frisé, Bichon Havanese</td>
+                  <td>8 000 Ft</td>
+                  <td>-</td>
+                  <td>13 500 Ft</td>
+                  <td>12 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Shih-tzu, Máltai selyemkutya</td>
+                  <td>8 000 Ft</td>
+                  <td>-</td>
+                  <td>13 500 Ft</td>
+                  <td>12 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Coton de tuléar</td>
+                  <td>8 000 Ft</td>
+                  <td>-</td>
+                  <td>14 500 Ft</td>
+                  <td>13 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Yorkshire terrier</td>
+                  <td>6 000 Ft</td>
+                  <td>-</td>
+                  <td>10 000 Ft</td>
+                  <td>9 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Toy uszkár, törpe uszkár</td>
+                  <td>8 000 Ft</td>
+                  <td>-</td>
+                  <td>13 500 Ft</td>
+                  <td>12 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">S-es méretű designer kutyák</td>
+                  <td>8 000 Ft</td>
+                  <td>15 000 Ft</td>
+                  <td>13 500 Ft</td>
+                  <td>12 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Pomerániai törpespicc</td>
+                  <td>10 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Pembroke és Cardigan welsh corgi</td>
+                  <td>10 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Shiba inu</td>
+                  <td>10 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Pekingi palotakutya</td>
+                  <td>10 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Papillon</td>
+                  <td>8 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Kínai meztelen kutya</td>
+                  <td>6 000 Ft</td>
+                  <td>-</td>
+                  <td>8 000 Ft</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Rövidszőrű kutyák</td>
+                  <td>6 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Drótszőrű foxterrrier, ír terrier, lakeland terrier, welsh terrier</td>
+                  <td>10 000 Ft</td>
+                  <td>16 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Standard schnauzer</td>
+                  <td>10 000 Ft</td>
+                  <td>17 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Petit Basset Griffon Vendéen</td>
+                  <td>10 000 Ft</td>
+                  <td>18 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Angol és amerikai cocker spániel</td>
+                  <td>12 000 Ft</td>
+                  <td>22 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Tibeti terrier</td>
+                  <td>15 000 Ft</td>
+                  <td>-</td>
+                  <td>17 000 Ft</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Lagotto romagnolo, portugál vízkutya</td>
+                  <td>13 000 Ft</td>
+                  <td>-</td>
+                  <td>18 000 Ft</td>
+                  <td>16 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Közép uszkár</td>
+                  <td>13 000 Ft</td>
+                  <td>-</td>
+                  <td>18 000 Ft</td>
+                  <td>16 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Kerry Blue terrier</td>
+                  <td>13 000 Ft</td>
+                  <td>-</td>
+                  <td>18 000 Ft</td>
+                  <td>16 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Pumi</td>
+                  <td>13 000 Ft</td>
+                  <td>-</td>
+                  <td>18 000 Ft</td>
+                  <td>16 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Mudi</td>
+                  <td>12 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Border Collie</td>
+                  <td>15 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Közepes testű spiccek, Shetlandi juhászkutya</td>
+                  <td>12 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">M-es méretű designer kutyák</td>
+                  <td>15 000 Ft</td>
+                  <td>-</td>
+                  <td>18 000 Ft</td>
+                  <td>16 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Rövidszőrű kutyák</td>
+                  <td>8 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>Zsinórozás</td>
+                  <td>Nyírás (formára)</td>
+                  <td>Nyírás (egyhossz)</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Puli</td>
+                  <td>18 000 Ft</td>
+                  <td>23 000 Ft</td>
+                  <td>18 000 Ft</td>
+                  <td>15 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Spanyol vízikutya</td>
+                  <td>13 000 Ft</td>
+                  <td>20 000 Ft</td>
+                  <td>18 000 Ft</td>
+                  <td>15 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Airedale terrier</td>
+                  <td>15 000 Ft</td>
+                  <td>25 000 Ft</td>
+                  <td>20 000 Ft</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Afgán agár</td>
+                  <td>18 000 Ft</td>
+                  <td>20 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Orosz agár</td>
+                  <td>17 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Ír farkaskutya, skót szarvasagár</td>
+                  <td>15 000 Ft</td>
+                  <td>23 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Grand Basset Griffon Vendéen</td>
+                  <td>15 000 Ft</td>
+                  <td>20 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Skót juhász</td>
+                  <td>19 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Belga juhászok (Groenendeal, Tervuren)</td>
+                  <td>18 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Svájci juhászkutya</td>
+                  <td>18 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Német juhászkutya, ónémetjuhász kutya</td>
+                  <td>18 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Ausztrál juhászkutya</td>
+                  <td>18 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Pireneusi hegykutya, Leonbergi</td>
+                  <td>25 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Bernáthegyi</td>
+                  <td>25 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Újfundlandi</td>
+                  <td>25 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Berni pásztor, Hovawart</td>
+                  <td>19 500 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Briard</td>
+                  <td>21 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Bearded collie</td>
+                  <td>21 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Bobtail</td>
+                  <td>25 000 Ft</td>
+                  <td>-</td>
+                  <td>30 000 Ft</td>
+                  <td>27 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Drótszőrű vizslák</td>
+                  <td>12 000 Ft</td>
+                  <td>15 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Angol szetter, Gordon szetter, Ír szetter</td>
+                  <td>14 000 Ft</td>
+                  <td>18 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Samoyed, alaszkai malamut</td>
+                  <td>19 500 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Szibériai husky, Akita inu</td>
+                  <td>16 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Chow-Chow</td>
+                  <td>18 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Golden Retriever</td>
+                  <td>18 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Labrador Retriever</td>
+                  <td>10 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Flat-coated Retriever</td>
+                  <td>14 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Springer spániel</td>
+                  <td>13 000 Ft</td>
+                  <td>18 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Óriás uszkár</td>
+                  <td>16 000 Ft</td>
+                  <td>-</td>
+                  <td>25 000 Ft</td>
+                  <td>18 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Óriás schnauzer</td>
+                  <td>17 000 Ft</td>
+                  <td>24 000 Ft</td>
+                  <td>20 000 Ft</td>
+                  <td>18 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">L-es méretű designer kutyák</td>
+                  <td>18 000 Ft</td>
+                  <td>25 000 Ft</td>
+                  <td>22 000 Ft</td>
+                  <td>20 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Rövid szőrű kutyák</td>
+                  <td>10 000 Ft</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
               </tbody>
+              </div>
             </table>
           </div>
         </div>
@@ -110,7 +570,7 @@
     <div class="container">
       <div class="section-heading light-heading">
         <p class="scribble">nézd milyen szépek lettek!</p>
-        <h2>GALÉRIA</h2>
+        <h2 class="text-light shadowed">GALÉRIA</h2>
       </div>
 
       <div class="gallery-grid">
@@ -222,3 +682,27 @@
   <script src="js/script.js"></script>
 </body>
 </html>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("pricelist");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
