@@ -37,8 +37,9 @@ a {
 .section-blue {
   background-color: var(--blue);
   background-image: url("../assets/background.jpg");
-  background-repeat: repeat;
-  background-size: 480px auto;
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-attachment: fixed;
 }
 
 .section {
@@ -139,7 +140,7 @@ a {
   align-items: center;
   text-decoration: none !important;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .brand img {
@@ -153,9 +154,14 @@ a {
   border: 2px solid rgba(255,255,255,.8);
   border-radius: 18px;
   color: #fff;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 700;
   text-decoration: none !important;
+  filter: drop-shadow(0px 0px 2px black);
+}
+
+.outline {
+  text-shadow: 0px 0px 4px black;
 }
 
 .hero-content {
@@ -196,6 +202,7 @@ a {
 .hero-image-wrap {
   position: relative;
   width: min(100%, 440px);
+  filter: drop-shadow(0px 0px 10px rgb(0,0,0,.3));
 }
 
 .hero-image {
@@ -230,7 +237,7 @@ a {
 .price-table-wrap {
   overflow-y: scroll;
   border-radius: 3px;
-  max-height: 75vh;
+  max-height: 600px;
 }
 
 .price-table {

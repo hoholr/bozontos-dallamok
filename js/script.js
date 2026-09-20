@@ -4,28 +4,58 @@ document.addEventListener("DOMContentLoaded", () => {
      ----------------------------------------- */
 
   const testimonials = [
-    "Marcihoz járok a kezdetektől fogva a golden doodle kutyámmal. Annyira szépen van mindig nyírva Manny, hogy sokszor megállítanak az utcán megdicsérni vagy ajánlást kérni. Menny Marcink hála sosem félt, nagyon szeret hozzá járni! Csak ajánlani tudom!",
-    "Mindig türelmesen és szeretettel bánik a kutyusommal. Gyönyörű munkát végez, és jó érzés úgy elhozni, hogy közben tudom: jó kezekben volt.",
-    "Precíz, kedves és nagyon figyelmes. A kutyám már az ajtóban tudja, hogy jó helyre érkezett. Szívből ajánlom a Bozontos Dallamokat!"
-  ];
+  "Marcihoz járok a kezdetektől fogva a golden doodle kutyámmal. Annyira szépen van mindig nyírva Manny, hogy sokszor megállítanak az utcán megdicsérni vagy ajánlást kérni. Menny Marcink hála sosem félt, nagyon szeret hozzá járni! Csak ajánlani tudom!",
+  "Marci türelmes és gyönyörűen rendbe teszi kutyusunk kezelhetetlen bundáját. Ajánlom mindenkinek!",
+  "Szuper szakember, ért a kutyák nyelvén, csak ajánlani tudom ❤️",
+  "Marci nem rég költözött ide és nyitotta meg kozmetikajat de mar 5 éve hozza járulunk folyamatosan. Nagyon alapos és rugalmas és jól bánik a kutyákkal. Szuper választás ☺️"
+];
 
-  const testimonialText = document.querySelector(".testimonial-card p");
-  const prevTestimonial = document.querySelector(".slider-arrow.prev");
-  const nextTestimonial = document.querySelector(".slider-arrow.next");
-  let testimonialIndex = 0;
+const testimonialCard = document.querySelector(".testimonial-card");
+const testimonialText = testimonialCard.querySelector("p");
+const prevTestimonial = document.querySelector(".slider-arrow.prev");
+const nextTestimonial = document.querySelector(".slider-arrow.next");
 
-  function showTestimonial(index) {
-    testimonialIndex = (index + testimonials.length) % testimonials.length;
-    testimonialText.textContent = testimonials[testimonialIndex];
-  }
+let testimonialIndex = 0;
 
-  prevTestimonial.addEventListener("click", () => {
-    showTestimonial(testimonialIndex - 1);
+function setTestimonialHeight() {
+  // Ideiglenesen eltávolítjuk a magasságkorlátozást
+  testimonialCard.style.height = "auto";
+
+  let maxHeight = 0;
+
+  testimonials.forEach(text => {
+    testimonialText.textContent = text;
+
+    maxHeight = Math.max(
+      maxHeight,
+      testimonialCard.scrollHeight
+    );
   });
 
-  nextTestimonial.addEventListener("click", () => {
-    showTestimonial(testimonialIndex + 1);
-  });
+  testimonialCard.style.height = `${maxHeight}px`;
+
+  // Vissza az aktuális véleményhez
+  testimonialText.textContent = testimonials[testimonialIndex];
+}
+
+function showTestimonial(index) {
+  testimonialIndex =
+    (index + testimonials.length) % testimonials.length;
+
+  testimonialText.textContent =
+    testimonials[testimonialIndex];
+}
+
+prevTestimonial.addEventListener("click", () => {
+  showTestimonial(testimonialIndex - 1);
+});
+
+nextTestimonial.addEventListener("click", () => {
+  showTestimonial(testimonialIndex + 1);
+});
+
+window.addEventListener("load", setTestimonialHeight);
+window.addEventListener("resize", setTestimonialHeight);
 
   /* -----------------------------------------
      Gallery lightbox
