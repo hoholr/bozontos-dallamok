@@ -104,7 +104,6 @@ a {
   border-radius: 18px;
   background: var(--red);
   color: #fff !important;
-  font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
@@ -318,19 +317,16 @@ a {
   padding-bottom: 64px;
 }
 
-.gallery-grid {
+.gallery-grid-5 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
 }
 
-.gallery-item {
-  overflow: hidden;
-  border: 3px solid #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
-  aspect-ratio: 1.2 / 1;
-  background: #eee;
+.gallery-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 
 .gallery-item img {
