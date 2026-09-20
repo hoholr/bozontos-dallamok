@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
      ----------------------------------------- */
 
   const testimonials = [
-  "Marcihoz járok a kezdetektől fogva a golden doodle kutyámmal. Annyira szépen van mindig nyírva Manny, hogy sokszor megállítanak az utcán megdicsérni vagy ajánlást kérni. Menny Marcink hála sosem félt, nagyon szeret hozzá járni! Csak ajánlani tudom!",
+  "Marcihoz járok a kezdetektől fogva a golden doodle kutyámmal. Annyira szépen van mindig nyírva Manny, hogy sokszor megállítanak az utcán megdicsérni vagy ajánlást kérni. Menny Marcinak hála sosem félt, nagyon szeret hozzá járni! Csak ajánlani tudom!",
   "Marci türelmes és gyönyörűen rendbe teszi kutyusunk kezelhetetlen bundáját. Ajánlom mindenkinek!",
   "Szuper szakember, ért a kutyák nyelvén, csak ajánlani tudom ❤️",
   "Marci nem rég költözött ide és nyitotta meg kozmetikajat de mar 5 éve hozza járulunk folyamatosan. Nagyon alapos és rugalmas és jól bánik a kutyákkal. Szuper választás ☺️"
