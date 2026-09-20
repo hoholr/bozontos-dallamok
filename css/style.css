@@ -245,18 +245,11 @@ a {
   line-height: 1.15;
 }
 
-.price-table th {
-  padding: 7px 6px;
-  border: 1px solid #fff;
+.price-table .thead-inverse {
   background: var(--red);
   color: #fff;
-  vertical-align: middle;
-  font-family: "Alfa Slab One", serif;
-}
-
-.thead-inverse {
-  background: var(--red);
-  color: #fff;
+  position: sticky;
+  top: 0px;
 }
 
 .price-table th:first-child {
